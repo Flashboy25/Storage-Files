@@ -26,7 +26,7 @@
     }
 }
 
-.ad-container {
+#header-ads {
     position: relative;
     display: inline-block;
     width: 100%; /* Default width */
@@ -34,7 +34,7 @@
     margin: 0 auto; /* Center on page */
 }
 
-.ad-container a {
+#header-ads a {
     display: block;
     text-decoration: none;
 }
