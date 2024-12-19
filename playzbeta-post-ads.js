@@ -2,8 +2,8 @@ function placeAds() {
   var wordCount = document.getElementById('post-body').innerText.split(' ').length;
 
   if (wordCount >= 140 && wordCount <= 160) {
-    document.getElementById('ad-1').innerHTML = '<script async="async" data-cfasync="false" src="//housecarefullyidiotic.com/90716a1bf53153829430440a519b0c90/invoke.js"></script>
-<div id="container-90716a1bf53153829430440a519b0c90"></div>';
+    document.getElementById('ad-1').innerHTML = '<p><script async="async" data-cfasync="false" src="//housecarefullyidiotic.com/90716a1bf53153829430440a519b0c90/invoke.js"></script>
+<div id="container-90716a1bf53153829430440a519b0c90"></div></p>';
   }
   if (wordCount >= 300 && wordCount <= 350) {
     document.getElementById('ad-2').innerHTML = '<p>Ad 2 Placeholder</p>';
