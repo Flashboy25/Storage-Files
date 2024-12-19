@@ -1,21 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
-  function placeAds() {
-    var wordCount = document.getElementById("post-body").innerText.split(" ").length;
+    // Function to insert ads dynamically
+    function placeAds() {
+      const postBody = document.getElementById("post-body");
 
-    if (wordCount >= 140 && wordCount <= 160) {
-      document.getElementById("ad-1").innerHTML = "<script async="async" data-cfasync="false" src="//housecarefullyidiotic.com/90716a1bf53153829430440a519b0c90/invoke.js"></script>
-<div id="container-90716a1bf53153829430440a519b0c90"></div>";
-    }
-    if (wordCount >= 300 && wordCount <= 350) {
-      document.getElementById("ad-2").innerHTML = "<p>Ad 2 Placeholder</p>";
-    }
-    if (wordCount >= 500 && wordCount <= 600) {
-      document.getElementById("ad-3").innerHTML = "<p>Ad 3 Placeholder</p>";
-    }
-    if (wordCount >= 700 && wordCount <= 900) {
-      document.getElementById("ad-4").innerHTML = "<p>Ad 4 Placeholder</p>";
-    }
-  }
+      if (!postBody) {
+        console.error("Post body not found.");
+        return;
+      }
 
-  placeAds();
-});
+      const words = postBody.innerHTML.split(" ");
+      const adSpots = [
+        { id: "ad-1", position: 140, adCode: "<p>Ad 1 Code</p>" },
+        { id: "ad-2", position: 300, adCode: "<p>Ad 2 Code</p>" },
+        { id: "ad-3", position: 500, adCode: "<p>Ad 3 Code</p>" },
+        { id: "ad-4", position: 700, adCode: "<p>Ad 4 Code</p>" },
+      ];
+
+      adSpots.forEach((spot) => {
+        if (words.length > spot.position) {
+          const adDiv = document.createElement("div");
+          adDiv.id = spot.id;
+          adDiv.innerHTML = spot.adCode;
+
+          const wordIndex = spot.position;
+          const splitContent = [
+            words.slice(0, wordIndex).join(" "),
+            words.slice(wordIndex).join(" "),
+          ];
+          postBody.innerHTML = splitContent[0] + adDiv.outerHTML + splitContent[1];
+        }
+      });
+    }
+
+    placeAds();
+  });
