@@ -8,8 +8,8 @@ function placeAds() {
     document.getElementById('ad-2').innerHTML = '<p>Ad 2 Placeholder</p>';
   }
   if (wordCount >= 500 && wordCount <= 600) {
-    document.getElementById('ad-3').innerHTML = '<p><script async="async" data-cfasync="false" src="//housecarefullyidiotic.com/90716a1bf53153829430440a519b0c90/invoke.js"></script>
-<div id="container-90716a1bf53153829430440a519b0c90"></div></p>';
+    document.getElementById('ad-3').innerHTML = '<script async="async" data-cfasync="false" src="//housecarefullyidiotic.com/90716a1bf53153829430440a519b0c90/invoke.js"></script>
+<div id="container-90716a1bf53153829430440a519b0c90"></div>';
   }
   if (wordCount >= 700 && wordCount <= 900) {
     document.getElementById('ad-4').innerHTML = '<p>Ad 4 Placeholder</p>';
