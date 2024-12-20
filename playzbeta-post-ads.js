@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const words = postBody.textContent.split(" ");
     console.log("Word count:", words.length);
     const adSpots = [
-      { id: "ad-1", position: 140, adCode: "<p>Ad 1 Code</p>" },
+      { id: "ad-1", position: 140, adCode: "<script async="async" data-cfasync="false" src="//housecarefullyidiotic.com/90716a1bf53153829430440a519b0c90/invoke.js"></script>
+<div id="container-90716a1bf53153829430440a519b0c90"></div>" },
       { id: "ad-2", position: 300, adCode: "<p>Ad 2 Code</p>" },
       { id: "ad-3", position: 500, adCode: "<p>Ad 3 Code</p>" },
       { id: "ad-4", position: 700, adCode: "<p>Ad 4 Code</p>" },
