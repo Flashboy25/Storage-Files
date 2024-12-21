@@ -26,7 +26,7 @@
     }
 }
 
-#header-ads {
+.ad-container {
     position: relative;
     display: inline-block;
     width: 100%; /* Default width */
@@ -34,7 +34,7 @@
     margin: 0 auto; /* Center on page */
 }
 
-#header-ads a {
+.ad-container a {
     display: block;
     text-decoration: none;
 }
@@ -49,5 +49,4 @@
     border-radius: 4px;
     font-size: 12px;
     font-family: inherit; /* Inherit website font */
-}
-
+        
