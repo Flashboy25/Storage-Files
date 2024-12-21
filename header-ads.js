@@ -31,5 +31,4 @@ function switchAd() {
 displayAd(offers[currentOfferIndex]);
 
 // Set up interval to change ads every 10 seconds
-setInterval(switchAd, 10000);
-
+setInterval(switchAd, 10000)
